@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src='js\componentes\change-site.js'></script>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id='DeciertoTatacoa' src="img\DeciertoTatacoa 1.jpg" alt="DeciertoTatacoa">
+      <img id='JardínBotánico' src="img\JardínBotánico 1.jpg" alt="JardínBotánico">
+      <img id='ValledelCocora' src="img\ValledelCocora 1.jpg" alt="ValledelCocora">
+    </a-assets>
+    <a-camera>
+      <a-cursor raycaster='objects: .click'></a-cursor>
+    </a-camera>
+    <a-entity position='0 2 -5'>
+      <a-plane opacity='0' color='white' position='1.2 0 0' width='1' height='1' class='click'
+       change-site='img: #DeciertoTatacoa'>
+       <a-image src='#DeciertoTatacoa'></a-image>
+      </a-plane>
+      <a-plane opacity='0' color='white' position='0 0 0' width='1' height='1' class='click'
+       change-site='img: #ValledelCocora'>
+       <a-image src='#ValledelCocora'></a-image>
+      </a-plane>
+      <a-plane opacity='0' color='white' position='-1.2 0 0' width='1' height='1' class='click'
+        change-site='img: #JardínBotánico'>
+        <a-image src='#JardínBotánico'></a-image>
+      </a-plane>
+    </a-entity>
+
+    <a-sky id='my-sky' src='#DeciertoTatacoa'></a-sky>
+  </a-scene>
+</body>
+
+</html>
